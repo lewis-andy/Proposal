@@ -16,6 +16,7 @@ body {
   box-shadow: 10px 10px 20px rgb(22, 22, 23);
 }
 
+
 .navbar-toggle {
   display: none; /* Hide by default on larger screens */
   cursor: pointer;
@@ -67,6 +68,33 @@ body {
 
   .nav-list.show {
     display: flex; /* Show the links when the class 'show' is added */
+  }
+}
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #555;
   }
 }
 /* after navigation bar*/
