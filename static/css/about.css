@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
 
 }
-
 .navbar {
   background-color: royalblue;
   padding: 15px;
@@ -14,12 +13,38 @@ body {
   align-items: center;
   border-bottom: 2px solid rgb(40, 39, 39);
   box-shadow: 10px 10px 20px rgb(22, 22, 23);
+  z-index: 1000;
+}
+
+
+.navbar .nav-list.active {
+  display: block; /* Display the navigation menu when it has the "active" class */
 }
 
 .navbar-toggle {
   display: none; /* Hide by default on larger screens */
   cursor: pointer;
 }
+
+/* media query to apply styles only for mobile screens */
+@media screen and (max-width: 768px) {
+  .navbar .nav-list {
+    display: none;
+    position: absolute;
+    top: 80px; /*  navbar height */
+    left: 0;
+    width: 100%; /* Make the navigation menu full width */
+    background-color: black;
+    padding: 30px; /* Increase padding to occupy more height */
+    box-shadow: 10px 10px 20px rgb(22, 22, 23);
+  }
+
+  .navbar .nav-list.active {
+    display: block;
+  }
+}
+
+
 .logo {
   font-size: 1.5em;
   font-weight: bold;
@@ -67,6 +92,33 @@ body {
 
   .nav-list.show {
     display: flex; /* Show the links when the class 'show' is added */
+  }
+}
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #555;
   }
 }
 /* after navigation bar*/
