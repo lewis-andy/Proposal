@@ -17,3 +17,7 @@
     window.addEventListener("resize", checkInView);
     checkInView();
   });
+function toggleMenu() {
+  var navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
