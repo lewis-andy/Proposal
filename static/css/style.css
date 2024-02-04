@@ -97,6 +97,7 @@ body {
   overflow: hidden;
   background-color: darkslategray; /* Set your background color */
   background-image:url("static/img/img_1.png") ;
+  height: 550px;
 }
 
 .slider_bg_box {
@@ -145,12 +146,13 @@ body {
 
 .btn-box {
   display: flex;
+  margin-top: 90px;
 }
 
 .btn1,
 .btn2 {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-right: 20px;
   text-decoration: none;
   color: white;
@@ -407,56 +409,124 @@ input {
     background-color: black;
 }
 /* card section service start*/
-/* Style for Service Section */
+
+/* Styles for the Services Section */
 .services-mf {
-  background-color: #f8f9fa; /* Set background color for the service section */
-  padding: 60px 0; /* Adjust the top and bottom padding */
+  background-color: #f8f9fa; /* Background color for the section */
+  padding: 60px 0; /* Adjust padding as needed */
 }
 
-/* Style for Service Cards */
+.title-box {
+  margin-bottom: 40px;
+}
+
+.title-a {
+  font-size: 36px;
+  color: black; /* Title color */
+}
+
+.subtitle-a {
+  font-size: 18px;
+  color: black; /* Subtitle color */
+}
+
+.line-mf {
+  width: 30%;
+  height: 1px;
+  background-color: #007bff; /* Line color */
+  margin: 16px auto;
+}
+
+/* Styles for the Service Cards */
 .service-box {
-  background-color: #fff; /* Set background color for the service cards */
-  border-radius: 15px; /* Add rounded corners */
-  overflow: hidden; /* Hide any content that might overflow */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  transition: transform 0.3s ease; /* Add a smooth transition on hover */
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Box shadow for the card */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
 }
 
 .service-box:hover {
-  transform: scale(1.05); /* Increase the size slightly on hover */
+  transform: scale(1.05); /* Enlarge the card on hover */
 }
 
 .service-ico {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
-  background-color: #343a40; /* Set background color for the icon circle */
-  color: #fff; /* Set icon color */
-  border-radius: 50%; /* Make the icon circle */
-  font-size: 36px; /* Adjust the icon size */
+  align-items: center;
+  height: 80px;
+  background-color: #007bff; /* Circle background color */
+  color: #fff; /* Circle icon color */
+}
+
+.ico-circle {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #fff; /* Background color for the circle */
 }
 
 .service-content {
-  padding: 20px; /* Adjust the padding inside the service content */
+  padding: 20px;
+  background-color: floralwhite;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.service-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, slategray 100%);
+  pointer-events: none;
 }
 
 .s-title {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #343a40; /* Set title color */
+  color: black; /* Service title color */
 }
 
 .s-description {
   font-size: 16px;
-  color: #666; /* Set description color */
+  color: black; /* Service description color */
 }
 
-/* Responsive Styling */
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fadeInUp animation to service content */
+.service-content {
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+  padding: 20px;
+}
+/* Hover Effect on Service Content */
+.service-content:hover::before {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, #ffffff 100%);
+}
+/* Animation on Hover */
+.service-content:hover {
+  animation: animate__animated animate__bounce; /* You can change 'bounce' to any other animation class */
+}
+/* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
   .service-box {
-    margin-bottom: 20px; /* Add some spacing between service cards on smaller screens */
+    margin-right: 0;
   }
 }
 

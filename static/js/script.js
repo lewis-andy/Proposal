@@ -1,23 +1,19 @@
-function toggleNav() {
-  var navList = document.getElementById("navList");
-  navList.classList.toggle("show");
-}
-  // Function to open the file input when the edit icon is clicked
-        function openFileInput() {
-            document.getElementById('fileInput').click();
+ // JavaScript to trigger the animation when the element is in the viewport
+  document.addEventListener("DOMContentLoaded", function () {
+    var services = document.querySelectorAll(".service-content");
+
+    function checkInView() {
+      services.forEach(function (service) {
+        var rect = service.getBoundingClientRect();
+        var isInView = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+
+        if (isInView) {
+          service.classList.add("animate__animated", "animate__fadeInUp");
         }
+      });
+    }
 
-        // Function to display the selected image in the profile container
-        function displayImage(input) {
-            const profileImage = document.getElementById('profileImage');
-
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    profileImage.src = e.target.result;
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+    window.addEventListener("scroll", checkInView);
+    window.addEventListener("resize", checkInView);
+    checkInView();
+  });

@@ -12,6 +12,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Animation CSS link -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <!-- js library for animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 <body>
 
@@ -123,6 +126,9 @@
 
 <!--start of explanation -->
 <!--/ Section Services Star /-->
+<div class="service-content animate__animated animate__fadeInUp">
+  <!-- ... End ... -->
+</div>
   <section id="service" class="services-mf route">
     <div class="container">
       <div class="row">
@@ -145,9 +151,13 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-content">
-              <h2 class="s-title">Web Design</h2>
+              <h2 class="s-title">User-centric features</h2>
               <p class="s-description text-center">
-               Designing, coding, and optimizing websites for seamless user experiences and functionality.
+              <ul>
+                <li>personalized dashboards</li>
+                <li>Reminders and Notification</li>
+                <li>intuitive Task creation</li>
+            </ul>
               </p>
             </div>
           </div>
@@ -156,10 +166,14 @@
           <div class="service-box">
 
             <div class="service-content">
-              <h2 class="s-title">Web Development</h2>
+              <h2 class="s-title">user interface design</h2>
               <p class="s-description text-center">
-                With the knowledge of front-end development I am abale to create interactive webpages according to clients
-                specification.
+                <ul>
+                <li>user profile</li>
+                <li>Task Data</li>
+                <li>Project details</li>
+                <li>Notification preference</li>
+            </ul>
               </p>
             </div>
           </div>
@@ -168,28 +182,38 @@
           <div class="service-box">
 
             <div class="service-content">
-              <h2 class="s-title">Photography</h2>
+              <h2 class="s-title">Web page layout</h2>
               <p class="s-description text-center">
-                For Any outdoor events, and during the weekend I delve in photowork. I dynamically manipulate tools to
-                produce high-end quality photos.
+                <ul>
+                <li>consistent nav-bar at top</li>
+                <li>calming color scheme</li>
+                <li>Promoting focus and clarity</li>
+                <li>colaborative project section</li>
+            </ul>
               </p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-box">
-
             <div class="service-content">
-              <h2 class="s-title">Responsive Design</h2>
+
+              <h2 class="s-title">Audit trail</h2>
               <p class="s-description text-center">
-                Crafting web layouts that adapt beautifully to diverse devices and screen sizes.
+                To be used to track:
+                  <ul>
+                <li>User action</li>
+                <li>Security-Related Events</li>
+                <li>Data modification</li>
+                <li>Error Logging</li>
+            </ul>
               </p>
             </div>
           </div>
         </div>
+      <!--
         <div class="col-md-4">
           <div class="service-box">
-
             <div class="service-content">
               <h2 class="s-title">Graphic Design</h2>
               <p class="s-description text-center">
@@ -224,7 +248,8 @@
                 <p>Welcome to our database proposal, where organization meets efficiency. With sleek design and seamless
                     functionality, our database solution is poised to revolutionize the way you store and access your
                     valuable information. Say goodbye to hours of searching and sorting through endless paperwork – our
-                    database is here to streamline your processes and elevate your productivity.
+                    database is here to streamline your processes and elevate your productivity.Here are some of the features to
+                    expect.
                 </p>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
@@ -340,6 +365,8 @@
             </form>
         </div>
     </div>
+            <!-- Hard script to this page --->
+            <script src="static/js/script.js"></script>
  <!-- Bootstrap JS and Popper.js CDN links -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
