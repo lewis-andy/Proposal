@@ -583,4 +583,42 @@ input {
 
 /*card section service end*/
 
+/*footer starts*/
+
+       footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards, changeColor 6s infinite;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes changeColor {
+            0%, 100% {
+                background-color: #333;
+            }
+            50% {
+                background-color: #3b5998;
+            }
+        }
+/*Footer Ends */
+
 
